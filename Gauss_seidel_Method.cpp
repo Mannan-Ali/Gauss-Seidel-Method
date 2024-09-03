@@ -4,7 +4,7 @@
 #include <cmath>
 using namespace std;
 
-//Function to return if the follwing matrix is daigonally dominant or not
+//Function to return if the follwing matrix is daigonally dominant or not.
 
 bool checkDiagDom(const vector<vector<double>>& arr, int dim) {
     int value = 0;
@@ -25,7 +25,7 @@ vector<vector<double>> permuteMat(const vector<vector<double>>& arr) {
     int dim = mat.size();
     
     do {
-        if (checkDiagDom(mat, dim)) {
+        if (checkDiagDom(mat, dim)) {  // calling checkDiagDom 
             cout << "Rearranged Matrix (diagonal Dominance):" << endl;
             for (int i = 0; i < dim; i++) {
                 for (int j = 0; j <= dim; j++) {
@@ -35,7 +35,7 @@ vector<vector<double>> permuteMat(const vector<vector<double>>& arr) {
             }
             return mat;
         }
-    } while (next_permutation(mat.begin(), mat.end()));
+    } while (next_permutation(mat.begin(), mat.end()));//use of inbuilt functioncnext_permutation
     
     cout << "The matrix has no diagonal dominance." << endl;
     return vector<vector<double>>();
@@ -49,7 +49,7 @@ vector<double> gaussSeidel(const vector<vector<double>>& mat, const vector<doubl
     int n = mat.size();
     vector<double> x = initialGuess;
     
-    for (int iter = 0; iter < 15; iter++) {  // Perform a fixed number of iterations
+    for (int iter = 0; iter < 10; iter++) {  // Perform a fixed number of iterations
         for (int i = 0; i < n; i++) {
             double sum = 0.0;
             for (int j = 0; j < n; j++) {
