@@ -90,7 +90,7 @@ int main() {
     vector<double> solution = gaussSeidel(A, initialGuess);
     
     if (!solution.empty()) {
-        cout << "Solution after 15 iterations:" << endl;
+        cout << "Solution after 10 iterations:" << endl;
         for (int i = 0; i < n; i++) {
             cout << "x[" << i + 1 << "] = " << solution[i] << endl;
         }
